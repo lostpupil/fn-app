@@ -12,3 +12,9 @@ functions powered by fn
 ### Deploying a single function in the app
 
 `fn deploy hello`
+
+### Protobuf
+
+```
+protoc --proto_path=shared/protobuf --ruby_out=func1/messages shared/protobuf/*.proto
+```

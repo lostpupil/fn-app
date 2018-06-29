@@ -1,4 +1,5 @@
 require 'fdk'
+require './models/user.rb'
 
 def myhandler(context, input)
   STDERR.puts "call_id: " + context.call_id
@@ -7,7 +8,10 @@ def myhandler(context, input)
   if nin && nin != ""
     name = nin
   end
-  return {message: "This is func1, #{name}."}
+  u = User.new(1, 'banana', 'banana@eurus.cn', '110')
+  STDERR.puts u.deserialize(u.serialize)
+  
+  return {message: u.serialize}
 end
 
 FDK.handle(:myhandler)
