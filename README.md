@@ -24,5 +24,5 @@ protoc --proto_path=shared/protobuf --ruby_out=func1/messages shared/protobuf/*.
 Generate node messages
 
 ```
-protoc --proto_path=shared/protobuf --js_out=func2/messages shared/protobuf/*.proto
+protoc --proto_path=shared/protobuf --js_out=import_style=commonjs:func2/messages shared/protobuf/*.proto
 ```
