@@ -1,0 +1,4 @@
+name: func3
+version: 0.0.2
+runtime: docker
+path: /func3
